@@ -11,8 +11,16 @@ def home():
 def about():
     return send_from_directory('public', 'about.html')
 
+@app.route('/about.html')
+def about_html():
+    return send_from_directory('public', 'about.html')
+
 @app.route('/contact')
 def contact():
+    return send_from_directory('public', 'contact.html')
+
+@app.route('/contact.html')
+def contact_html():
     return send_from_directory('public', 'contact.html')
 
 if __name__ == "__main__":
