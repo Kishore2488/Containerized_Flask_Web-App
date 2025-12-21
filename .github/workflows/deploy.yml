@@ -6,6 +6,7 @@
     key: ${{ secrets.EC2_SSH_KEY }}
     request_pty: true
     script: |
+      set -e
       cd /home/ec2-user/flask-app
       git pull origin main
       pip3 install -r requirements.txt
